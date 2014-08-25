@@ -1,0 +1,23 @@
+class Core.Forum.Progress
+
+      _updateHud: () ->
+
+      		  $(@container).html(@_hudTemplate(
+
+			current: @index
+
+			max: @max
+
+			width: (@index * 100) / @max
+
+		))
+
+@_bindLinks()
+
+
+
+_bindAll: () ->
+
+	  @_bindScroll()
+
+	  @_bindLinks()
